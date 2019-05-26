@@ -17,9 +17,6 @@ import static com.generator_example.demo.core.ProjectConstant.*;
 
 /**
  * Class Description:  Mybatis & Mapper & PageHelper 配置
- *
- * @author Wilson Hu
- * @date 2017-10-25
  */
 @Configuration
 public class MybatisConfig {
@@ -40,8 +37,8 @@ public class MybatisConfig {
         properties.setProperty("supportMethodsArguments", "true");//支持通过 Mapper 接口参数来传递分页参数
         pageHelper.setProperties(properties);
 
-//        //添加插件
-//        factory.setPlugins(new Interceptor[]{pageHelper});
+        //添加插件
+        factory.setPlugins(new Interceptor[]{pageHelper});
 
         //添加XML目录
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
